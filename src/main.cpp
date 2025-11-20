@@ -1,18 +1,25 @@
 #include <Arduino.h>
+#include "WifiConnect.h"
+#include "WifiConfig.h"
+#include "OTA.h"
 
-// put function declarations here:
-int myFunction(int, int);
 
 void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+  Serial.begin(115200);
+  
+  uint32_t t0 = millis();
+  while (!Serial && millis() - t0 < 3000) { delay(10); }
+  Serial.println("\n[BOOT] Desk #3");
+
+  wifiSetup(WIFI_CONFIG);
+  setupOTA();
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-}
+  wifiLoop();
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
+  if (wifiIsConnected()) {
+    
+  } 
+  loopOTA();
 }
