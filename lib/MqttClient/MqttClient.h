@@ -8,7 +8,7 @@ void mqttSetup();
 // À appeler dans loop()
 void mqttLoop();
 
-// Assure la connexion MQTT (bloquant comme ton code actuel).
+// Assure la connexion MQTT
 // Retourne true si une nouvelle connexion vient d'être établie.
 bool mqttEnsureConnected();
 

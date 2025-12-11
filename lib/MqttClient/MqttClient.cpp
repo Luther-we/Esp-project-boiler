@@ -30,7 +30,7 @@ bool mqttEnsureConnected() {
       clientId.c_str(),
       ProjectConfig::mqttUser(),
       ProjectConfig::mqttPassword(),
-      Topics::availability().c_str(),   // Last Will topic
+      Topics::availability().c_str(),
       0,
       true,
       "offline"

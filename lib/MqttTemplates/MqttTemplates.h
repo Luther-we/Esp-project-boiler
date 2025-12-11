@@ -1,10 +1,8 @@
 #pragma once
 #include <stdint.h>
 
-
-
-// Publie température + humidité sur les topics capteurs
+// Publie température sur les topics capteurs
 void mqttPublishSht(float temperature);
 
-// Publie la discovery Home Assistant (light + temp + hum)
+// Publie la discovery Home Assistant
 void mqttPublishDiscovery();

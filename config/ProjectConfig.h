@@ -2,9 +2,6 @@
 #include <Arduino.h>
 #include "ProjectProfile.h"
 
-// WIFI_SSID, WIFI_PASS, MQTT_HOST, MQTT_PORT, MQTT_USER, MQTT_PASSWD
-// doivent venir de tes build_flags (variables d'env)
-
 namespace ProjectConfig {
 
   // --- WiFi : valeurs de config ---
@@ -69,7 +66,7 @@ namespace ProjectConfig {
   inline const char* deviceName()    { return ProjectProfile::DEVICE_NAME; }
   inline const char* friendlyName()  { return ProjectProfile::FRIENDLY_NAME; }
 
-  // Base des topics (ex: "desk3/")
+  // Base des topics
   inline String baseTopic() {
     return String(ProjectProfile::MQTT_BASE_PREFIX);
   }

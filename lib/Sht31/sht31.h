@@ -7,7 +7,6 @@ struct Sht31Config {
   unsigned long intervalMs;
 };
 
-// Callback appelée à chaque nouvelle mesure valide
 using Sht31Callback = void(*)(float temperature);
 
 void sht31Setup(const Sht31Config& cfg, Sht31Callback cb);
